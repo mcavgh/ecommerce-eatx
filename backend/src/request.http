@@ -1,0 +1,12 @@
+# POST http://localhost:3001/users/register
+# Content-Type: application/json
+
+# {
+#     "name":"Carlitos",
+#     "surname":"carlangas",
+#     "email":"sdfsdf@fd.vo",
+#     "password":"1234"
+  
+# }
+GET http://localhost:3001/orders/2
+

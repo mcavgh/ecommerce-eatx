@@ -1,0 +1,106 @@
+.catalog--main{
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+.catalog--main-row{
+    /* display: flex;
+    flex-direction: row;
+    width: 100%; */
+
+    grid-gap: -100%;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 70px 70px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* grid-gap: 70px 70px; */
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+
+  
+.grid-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+.catalog--main-col-menu-box{
+    margin-top: 1em;
+    margin-left: 1em;
+
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    
+    
+}
+.catalog--main-col-menu-box h2{
+    text-align: center;
+    padding-top: 1em;
+}
+.catalog--main-col-menu-box form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.button-filter{
+   
+    border-radius: 2em;
+    /* cursor: pointer; */
+    /* width: 65%; */
+    /* font-family: 'Oxanium' cursive; */
+    
+    border: 3px solid white;
+
+}
+.button-filter:hover{
+    border: 3px solid rgb(234, 50, 111);
+    border-radius: 0.2em;
+    transition: border 0.3s ease-in;
+}
+.button-filter:active {
+    border: 3px solid rgba(146, 46, 133, 0);
+    background-color:rgba(146, 46, 133, 0.7); ;
+    border-radius: 0.2em;
+    transition: all 0.3s ease-in ;
+    
+}
+/* .catalog--main-col{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+ 
+} */
+
+@media(max-width:1000px){
+    .catalog--main-row{
+        display: flex;
+        width: 100%;
+    }
+    .catalog--main-col-menu{
+        display: flex;
+        width: 98%;
+    }
+}
+@media(max-width:480px){
+    .catalog--main{
+    margin-top: 9em;
+    }
+}
+
+
+.grid{
+    align-items: center;
+    flex-direction:row-reverse;
+}

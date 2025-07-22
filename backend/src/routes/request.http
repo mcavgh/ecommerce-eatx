@@ -1,0 +1,13 @@
+POST http://localhost:3001/cart/5/order/1/quantity/8
+
+
+# POST http://localhost:3001/users/
+
+# Content-Type: application/json
+
+# {
+# "price":5,
+# "quantity":23,
+# "state":"carrito",
+# "userId":1
+# }
