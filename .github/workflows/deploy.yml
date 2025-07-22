@@ -9,7 +9,7 @@ env:
   REGISTRY: ghcr.io
   # Cambiar estos nombres para evitar caracteres inválidos
   IMAGE_NAME_BACKEND: postgress-docker-compose-backend
-  IMAGE_NAME_FRONTEND: postgress-docker-compose-frontend
+ # IMAGE_NAME_FRONTEND: postgress-docker-compose-frontend
 
 jobs:
   test:
@@ -34,10 +34,10 @@ jobs:
         cd backend
         npm ci
     
-    - name: Install frontend dependencies
-      run: |
-        cd frontend
-        npm ci
+  #  - name: Install frontend dependencies
+   #   run: |
+    #    cd frontend
+     #   npm ci
 
   build-and-push:
     needs: test
