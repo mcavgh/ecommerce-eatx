@@ -9,7 +9,11 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
 # Copiar archivos de dependencias
 COPY package*.json ./
-RUN npm install
+
+# Limpiar caché de npm y reinstalar dependencias
+
+RUN npm install --legacy-peer-deps
+
 # Copiar código fuente y construir
 COPY . .
 RUN npm run build

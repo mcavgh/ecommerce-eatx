@@ -41,25 +41,6 @@ services:
       - app-network
 
   # Frontend React
-  frontend:
-    build: 
-      context: ./frontend
-      args:
-        REACT_APP_API_URL: "http://161.35.59.121:3001"
-    container_name: react_frontend
-    restart: always
-    ports:
-      - "3000:80"  # Cambiar puerto interno a 80
-    environment:
-      - REACT_APP_API_URL=http://161.35.59.121:3001
-    depends_on:
-      - backend
-    networks:
-      - app-network
-    # Remover volúmenes de desarrollo
-    volumes:
-      - ./frontend:/usr/src/app
-      - /usr/src/app/node_modules
 
   # pgAdmin para administrar la BD
   # pgadmin:
