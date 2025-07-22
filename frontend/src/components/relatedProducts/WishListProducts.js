@@ -22,7 +22,7 @@ export const WishListProducts = () => {
 
     }, [])
 
-    return (
+    if (userId) return (
         <>
             <Typography component="p" variant="h4" color="primary">
                 Productos de su Wishlist
@@ -48,4 +48,5 @@ export const WishListProducts = () => {
             </Carousel>
         </>
     )
+    return null
 }
