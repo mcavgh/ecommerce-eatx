@@ -18,7 +18,7 @@ let sequelize =
         native: false
       })
     : new Sequelize(
-        'postgres://postgres:2020@localhost:5432/ecommerce11',
+        'postgres://postgres:2020@postgres:5432/ecommerce11',
         { logging: false, native: false }
       );
 const basename = path.basename(__filename);
