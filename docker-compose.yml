@@ -28,9 +28,9 @@ services:
       - NODE_ENV=development
       - DB_HOST=postgres
       - DB_PORT=5432
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=2020
-      - POSTGRES_DB=ecommerce11
+      - DB_USER=postgres
+      - DB_PASSWORD=2020
+      - DB_NAME=ecommerce11
       - PORT=3001
     depends_on:
       - postgres
