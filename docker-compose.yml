@@ -21,6 +21,7 @@ services:
   # Backend Node.js
   backend:
     image: ghcr.io/mcavgh/ecommerce-eatx-backend
+    platform: linux/amd64
     container_name: nodejs_backend
     restart: always
     ports:
@@ -47,6 +48,7 @@ services:
     #   args:
     #     REACT_APP_API_URL: "http://161.35.59.121:3001"
     image: ghcr.io/mcavgh/ecommerce-eatx-frontend
+    platform: linux/amd64
     container_name: react_frontend
     restart: always
     ports:
