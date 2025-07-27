@@ -27,7 +27,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_USER=postgres
@@ -44,10 +44,11 @@ services:
 
   frontend:
     # build:
-    #   context: ./frontend
-    #   args:
-    #     REACT_APP_API_URL: "http://161.35.59.121:3001"
-    image: ghcr.io/mcavgh/ecommerce-eatx-frontend:latest
+    build:
+      context: ./frontend
+      args:
+        REACT_APP_API_URL: "http://161.35.59.121:3001"
+    #image: ghcr.io/mcavgh/ecommerce-eatx-frontend:latest
     platform: linux/amd64
     container_name: react_frontend
     restart: always

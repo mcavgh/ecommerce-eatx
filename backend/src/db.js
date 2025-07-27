@@ -7,18 +7,12 @@ const path = require('path');
 const { DB_USER, DB_PASSWORD, DB_HOST,DB_NAME } = process.env;
 let sequelize =
   process.env.NODE_ENV === "production"
-    ? new Sequelize({
-        database: DB_NAME,
-        dialect: "postgres",
-        host: DB_HOST,
-        port: 5432,
-        username: DB_USER,
-        password: DB_PASSWORD,
-        logging: false,
-        native: false
-      })
+    ? new Sequelize( //host interno , en Docker Compose
+      'postgres://postgres:2020@postgres:5432/ecommerce11',
+      { logging: false, native: false }
+    )
     : new Sequelize(
-        'postgres://postgres:2020@postgres:5432/ecommerce11',
+        'postgres://postgres:2020@161.35.59.121:5433/ecommerce11',
         { logging: false, native: false }
       );
 const basename = path.basename(__filename);
