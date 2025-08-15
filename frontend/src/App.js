@@ -49,8 +49,8 @@ export const themeLight = createMuiTheme({
       main: '#14141A'
     },
     background: {
-      default: "#cfd8dc",
-      level1: "#cfd8dc",
+      default: "linear-gradient(135deg,rgb(154, 88, 62) 0%, #ff6803 100%)",
+      level1: "linear-gradient(135deg, #3d2318 0%, #ff8533 100%)",
       level2: "#cfd8dc",
       paper: "#fafafa"
     },
