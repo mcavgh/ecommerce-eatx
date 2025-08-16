@@ -2,7 +2,6 @@
 services:
   # Base de datos PostgreSQL
   postgres:
-    # build: ./backend
     image: postgres:15
     container_name: postgres_db
     restart: always
@@ -44,10 +43,6 @@ services:
 
   frontend:
     image: ghcr.io/mcavgh/ecommerce-eatx-frontend:latest
-    # build:
-    #   context: ./frontend
-    #   args:
-    #     REACT_APP_API_URL: "http://161.35.59.121:3001"
     platform: linux/amd64
     container_name: react_frontend
     restart: always
