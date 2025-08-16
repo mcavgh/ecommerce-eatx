@@ -7,37 +7,38 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  # Cambiar estos nombres para evitar caracteres inválidos
-  IMAGE_NAME_BACKEND: postgress-docker-compose-backend
- # IMAGE_NAME_FRONTEND: postgress-docker-compose-frontend
+  GITHUB_USERNAME: mcavgh
+  REPO_NAME: ecommerce-eatx
+  IMAGE_NAME_BACKEND:  ghcr.io/mcavgh/ecommerce-eatx-backend
+  IMAGE_NAME_FRONTEND: ghcr.io/mcavgh/ecommerce-eatx-frontend
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Run Tests
+  #   name: Run Tests
     
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
     
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: |
-          backend/package-lock.json
-          frontend/package-lock.json
+  #   - name: Set up Node.js
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: '18'
+  #       cache: 'npm'
+  #       cache-dependency-path: |
+  #         backend/package-lock.json
+  #         frontend/package-lock.json
     
-    - name: Install backend dependencies
-      run: |
-        cd backend
-        npm ci
+  #   - name: Install backend dependencies
+  #     run: |
+  #       cd backend
+  #       npm ci
     
-  #  - name: Install frontend dependencies
-   #   run: |
-    #    cd frontend
-     #   npm ci
+  # #  - name: Install frontend dependencies
+  #  #   run: |
+  #   #    cd frontend
+  #    #   npm ci
 
   build-and-push:
     needs: test
