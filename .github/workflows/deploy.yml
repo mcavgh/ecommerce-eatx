@@ -13,8 +13,8 @@ env:
   IMAGE_NAME_FRONTEND: ghcr.io/mcavgh/ecommerce-eatx-frontend
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  # test:
+  #   runs-on: ubuntu-latest
   #   name: Run Tests
     
   #   steps:
