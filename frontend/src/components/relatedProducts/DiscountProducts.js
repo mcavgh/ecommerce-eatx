@@ -68,7 +68,7 @@ export const DiscountProducts = () => {
         color="primary" 
         className={classes.sectionTitle}
       >
-        Productos con descuentos
+        Productos con descuento
       </Typography>
       
       <Divider style={{ marginBottom: 24 }} />
