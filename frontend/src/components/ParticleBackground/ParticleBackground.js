@@ -17,7 +17,7 @@ const ParticleBackground = ({
             const startY = 100; // Siempre empezar desde abajo
             
             // Velocidad hacia adelante (hacia arriba)
-            const speed = Math.random() * 1 + 2; // 2 a 5 segundos
+            const speed = Math.random() * 1 + 7; // 2 a 5 segundos
             const horizontalDrift = (Math.random() - 0.5) * 1; // Ligero movimiento horizontal
             
             particle.style.cssText = `
