@@ -41,7 +41,6 @@ jobs:
   #    #   npm ci
 
   build-and-push:
-    needs: test
     runs-on: ubuntu-latest
     
     permissions:
