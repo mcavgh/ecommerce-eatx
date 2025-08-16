@@ -30,7 +30,7 @@ import grey from '@material-ui/core/colors/grey';
 
 
 dotenv.config()
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://161.35.59.121:3001"
+axios.defaults.baseURL =  "http://161.35.59.121:3001"
 
 export const themeLight = createMuiTheme({
   typography: {
