@@ -111,7 +111,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: | #antes se debe clonar
-          cd /home/ecommerce-eatx
+          cd /root/ecommerce-eatx
           git pull origin main
           docker compose -f docker-compose.yml down
           docker compose -f docker-compose.yml pull
