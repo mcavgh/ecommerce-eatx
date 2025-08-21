@@ -10,7 +10,6 @@ import ParticleBackground from '../components/ParticleBackground/ParticleBackgro
 export const LandingPage = (props) => {
     return (
         <>
-            {/* Componente de partículas reutilizable */}
             <ParticleBackground 
                 enableHover={true}
                 animationSpeed={50}

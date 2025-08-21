@@ -4,13 +4,15 @@ import { useDispatch } from 'react-redux'
 import clsx from 'clsx';
 import axios from "axios";
 import { useTheme } from '@material-ui/core/styles';
-import { Menu, Avatar, MenuItem, Drawer, CssBaseline, AppBar, Toolbar, Badge, List, Button, Divider, IconButton, ListItem, ListItemText, FormControlLabel, Switch } from '@material-ui/core';
+import { Menu, Avatar, MenuItem, Drawer, CssBaseline, AppBar, Toolbar, Badge, List, Button, Divider, IconButton, ListItem, ListItemText, FormControlLabel, Switch, Typography, Box } from '@material-ui/core';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import ChevronLeftRoundedIcon from '@material-ui/icons/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@material-ui/icons/ChevronRightRounded';
 import ShoppingCartRoundedIcon from '@material-ui/icons/ShoppingCartRounded';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+import LocalPizzaIcon from '@material-ui/icons/LocalPizza';
 import { useStyles } from './styles'
 import { Link, useHistory } from 'react-router-dom';
 import { SearchBar } from './searchBar/SearchBar';
@@ -89,8 +91,31 @@ export default function PersistentDrawerLeft() {
                         <MenuRoundedIcon fontSize="large" />
                     </IconButton>
                     }
-                    <Button onClick={refreshSearch}  color='inherit' to="/" component={Link}>
-                        eatx
+                    <Button 
+                        onClick={refreshSearch}  
+                        color='inherit' 
+                        to="/" 
+                        component={Link}
+                        className={classes.logoButton}
+                        disableRipple
+                    >
+                        <Box display="flex" alignItems="center" gap={1}>
+                            <Box 
+                                display="flex" 
+                                alignItems="center" 
+                                className={classes.logoContainer}
+                            >
+                             
+                             
+                            <Typography 
+                                variant="h3" 
+                                //className={classes.logoText}
+                                component="span"
+                            >
+                                    🍕🍔
+                            </Typography>
+                        </Box>
+                            </Box>
                     </Button>
 
                     <div className={classes.search}>

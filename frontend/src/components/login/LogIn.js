@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     google: {
         minWidth: "100%",
         marginBottom: '18px',
+        borderRadius: '30px',
     },
     avatar: {
         margin: theme.spacing(1),

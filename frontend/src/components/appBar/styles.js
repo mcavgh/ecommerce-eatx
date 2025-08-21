@@ -130,4 +130,65 @@ export const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
+    // Agregar estos estilos al objeto useStyles
+    logoButton: {
+      textTransform: 'none',
+      padding: theme.spacing(1, 2),
+      borderRadius: '12px',
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        transform: 'scale(1.05)',
+      },
+    },
+    logoContainer: {
+      position: 'relative',
+      marginRight: theme.spacing(1),
+      animation: '$bounce 2s infinite',
+    },
+    pizzaIcon: {
+      color: '#FF6B35',
+      transform: 'rotate(-15deg)',
+      filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
+      animation: '$spin 4s linear infinite',
+    },
+    forkIcon: {
+      color: '#FFD23F',
+      position: 'absolute',
+      right: '-8px',
+      top: '50%',
+      transform: 'translateY(-50%) rotate(25deg)',
+      filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.3))',
+    },
+    logoText: {
+      fontWeight: 'bold',
+      background: 'linear-gradient(45deg, #FF6B35 30%, #FFD23F 90%)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      backgroundClip: 'text',
+      textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+      letterSpacing: '2px',
+    },
+    '@keyframes bounce': {
+      '0%, 20%, 50%, 80%, 100%': {
+        transform: 'translateY(0)',
+      },
+      '40%': {
+        transform: 'translateY(-5px)',
+      },
+      '60%': {
+        transform: 'translateY(-3px)',
+      },
+    },
+    '@keyframes spin': {
+      '0%': {
+        transform: 'rotate(-15deg)',
+      },
+      '50%': {
+        transform: 'rotate(-5deg)',
+      },
+      '100%': {
+        transform: 'rotate(-15deg)',
+      },
+    },
 }));
